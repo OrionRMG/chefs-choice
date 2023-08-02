@@ -228,3 +228,28 @@ p {
     font-weight: 400;
     line-height: normal;
 }
+
+@media only screen and (max-width: 600px)  {
+    body {
+        width: 100%
+    }
+
+    .generatePanel {
+        width: 95%
+    }
+
+    .contentPanel {
+        width: 95%;
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .contentImgIng {
+        flex-direction: column;
+    }
+
+    #mealImage {
+        width: 306px;
+        height: 306px;
+    }
+}
