@@ -47,11 +47,13 @@
             <div class="contentTop">
                 <div class="contentHeading">
                     <h1><%= data.strMeal %></h1>
-                    <ul class="tags">
-                        <% tagList.forEach(tag => { %>
-                            <li class="tag"><%= tag %></li>
-                        <% }); %>
-                    </ul>
+                    <% if (locals.tagList.length > 0) { %>
+                        <ul class="tags">
+                            <% tagList.forEach(tag => { %>
+                                <li class="tag"><%= tag %></li>
+                            <% }); %>
+                        </ul>
+                    <% } %>
                 </div>
                 <div class="contentImgIng">
                     <div id="mealImage" style="background: url('<%= data.strMealThumb %>'); background-size: 100%;"></div>
