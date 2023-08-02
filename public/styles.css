@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap');
+
+/* font-family: 'DM Sans', sans-serif; */
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--cc-black, #1D2535)
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+    box-shadow: 0px 4px 13px -3px rgba(20, 26, 37, 0.25);
+}
+
+.generatePanel {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 740px;
+    display: inline-flex;
+    padding: 14px 14px 14px 20px;
+    margin-top: 32px;
+    align-items: center;
+    border-radius: 24px;
+    background: #FFF;
+    box-shadow: 0px 2px 12px -4px rgba(20, 26, 37, 0.25);
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.submitBtn {
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 12px;
+    background: #F0AA40;
+    color: white;
+}
+
+.submitBtn:hover {
+    background: #f8b755;
+}
+
+.submitBtn:active {
+    background: #e69f36;
+}
+
+.dropDown {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+select {
+    border: none;
+    background-color: #ffffff00;
+    font-size: 20px;
+    direction: rtl;
+    text-align: left;
+}
+
+select:focus {
+    outline: none;
+}
+
+.contentPanel {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 32px;
+    width: 740px;
+    max-height: 80vh;
+    display: inline-flex;
+    padding: 32px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    border-radius: 27px;
+    background: #FFF;
+    box-shadow: 0px 6px 22px -4px rgba(20, 26, 37, 0.25);
+    overflow-y: auto;
+}
+
+.contentTop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 24px;
+}
+
+.contentHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.tags {
+    max-width: 45%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    display: flex;
+    padding: 2px 6px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: #E9E9E9;
+    color: #6C6C6C;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.contentImgIng {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+}
+
+#mealImage {
+    width: 50%;
+    height: 338px;
+    border-radius: 12px;
+    background-size: 30%;
+    background-position: center;
+}
+
+.ingHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+h2 {
+    margin: 0px;
+}
+
+.link {
+    color: #F0AA40;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.recipe {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.ingredients {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.ingredient {
+    color: var(--cc-body, #485367);
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6em;
+}
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 2;
+}
+
+p {
+    margin: 0px;
+    color: var(--cc-body, #485367);
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

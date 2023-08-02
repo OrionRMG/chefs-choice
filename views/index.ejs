@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Chef's Choice</title>
+</head>
+
+<% let bgNum = Math.floor(Math.random() * 7) %>
+
+<body style="background-image: url('images/pattern<%= bgNum %>.svg'); background-repeat: repeat;">
+
+    <header>
+        <h1>Chef's Choice</h1>
+    </header>
+
+    <main>
+        <div class="generatePanel">
+            <form action="/" method="POST">
+                    <select name="category" class="categorySelect dropDown">
+                        <% if (locals.selectedOption) { %>
+                        <option value="<%= selectedOption %>" selected="selected"><%= selectedOption %></option>
+                        <% } %>
+                        <option value="">All categories</option>
+                        <option value="Beef">Beef</option>
+                        <option value="Chicken">Chicken</option>
+                        <option value="Dessert">Dessert</option>
+                        <option value="Lamb">Lamb</option>
+                        <option value="Miscellaneous">Miscellaneous</option>
+                        <option value="Pasta">Pasta</option>
+                        <option value="Pork">Pork</option>
+                        <option value="Seafood">Seafood</option>
+                        <option value="Side">Side</option>
+                        <option value="Starter">Starter</option>
+                        <option value="Vegan">Vegan</option>
+                        <option value="Vegetarian">Vegetarian</option>
+                        <option value="Breakfast">Breakfast</option>
+                        <option value="Goat">Goat</option>
+                    </select>
+                <button type="submit" class="submitBtn">New recipe</button>
+            </form>
+        </div>
+
+        <div class="contentPanel">
+            <div class="contentTop">
+                <div class="contentHeading">
+                    <h1><%= data.strMeal %></h1>
+                    <ul class="tags">
+                        <% tagList.forEach(tag => { %>
+                            <li class="tag"><%= tag %></li>
+                        <% }); %>
+                    </ul>
+                </div>
+                <div class="contentImgIng">
+                    <div id="mealImage" style="background: url('<%= data.strMealThumb %>'); background-size: 100%;"></div>
+                    <div class="ingredients">
+                        <h2>Ingredients</h2>
+                        <ul>
+                            <% measures.forEach(element => { %>
+                                <li class="ingredient"><%= element %> <%= ingredients[measures.indexOf(element)] %></li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="recipe">
+                <div class="instructions">
+                    <div class="ingHead">
+                        <h2>Instructions</h2>
+                        <p><a href="<%= data.strSource %>" class="link">See original recipe</a></p>
+                    </div>
+                    <% instructions.forEach(element => { %>
+                        <p><%= element %></p>                        
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
