@@ -79,7 +79,6 @@ select {
     border: none;
     background-color: #ffffff00;
     font-size: 20px;
-    direction: rtl;
     text-align: left;
     color: var(--cc-black, #1D2535)
 }
